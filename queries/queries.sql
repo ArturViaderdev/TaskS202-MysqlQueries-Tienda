@@ -5,7 +5,7 @@ SELECT nombre from producto;
 SELECT nombre,precio from producto;
 
 -- 3. Llista totes les columnes de la taula producto.
-SELECT * from producto;
+SELECT codigo,nombre,precio,codigo_fabricante from producto;
 
 -- 4. Llista el nom dels productes, el preu en euros (precio_eur) i el preu en dòlars estatunidencs (precio_usd) amb un tipus de canvi de 1 € = 1 $.
 SELECT nombre, precio as precio_eur, (precio*1) as precio_usd FROM producto;
@@ -44,10 +44,10 @@ SELECT nombre FROM fabricante ORDER BY nombre DESC;
 SELECT nombre, precio FROM producto ORDER BY nombre ASC, precio DESC;
 
 -- 16. Retorna una llista amb les 5 primeres files de la taula fabricante.
-SELECT * FROM fabricante LIMIT 5;
+SELECT codigo,nombre FROM fabricante LIMIT 5;
 
 -- 17. Retorna una llista amb 2 files a partir de la quarta fila de la taula fabricante. La quarta fila també s'ha d'incloure en la resposta.
-SELECT * FROM fabricante LIMIT 2 OFFSET 3;
+SELECT codigo,nombre FROM fabricante LIMIT 2 OFFSET 3;
 
 -- 18. Llista el nom i el preu del producte més barat. (Utilitza solament les clàusules ORDER BY i LIMIT).
 SELECT nombre, precio FROM producto ORDER BY precio ASC LIMIT 1;
@@ -104,10 +104,10 @@ SELECT f.nombre AS fabricante, p.nombre AS producto FROM fabricante AS f LEFT JO
 SELECT f.nombre AS fabricante FROM fabricante AS f LEFT JOIN producto AS p ON f.codigo = p.codigo_fabricante WHERE p.codigo_fabricante IS NULL;
 
 -- 36. Retorna tots els productes del fabricant Lenovo. (Sense utilitzar INNER JOIN).
-SELECT * FROM producto WHERE codigo_fabricante=(SELECT codigo FROM fabricante WHERE nombre='Lenovo');
+SELECT codigo,nombre,precio,codigo_fabricante FROM producto WHERE codigo_fabricante=(SELECT codigo FROM fabricante WHERE nombre='Lenovo');
 
 -- 37. Retorna totes les dades dels productes que tenen el mateix preu que el producte més car del fabricant Lenovo. (Sense usar INNER JOIN).
-SELECT * from producto WHERE precio=(SELECT precio FROM producto WHERE codigo_fabricante=(SELECT codigo FROM fabricante WHERE nombre='Lenovo') ORDER BY precio DESC LIMIT 1);
+SELECT codigo,nombre,precio,codigo_fabricante from producto WHERE precio=(SELECT precio FROM producto WHERE codigo_fabricante=(SELECT codigo FROM fabricante WHERE nombre='Lenovo') ORDER BY precio DESC LIMIT 1);
 
 -- 38. Llista el nom del producte més car del fabricant Lenovo.
 SELECT p.nombre FROM producto AS p JOIN fabricante AS f ON f.codigo = p.codigo_fabricante WHERE f.nombre='Lenovo' ORDER BY p.precio DESC LIMIT 1;
