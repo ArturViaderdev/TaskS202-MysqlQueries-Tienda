@@ -1,44 +1,5 @@
 # 📌 Sprint 2.2: SQL Evaluator (Tienda)
 
-## How to Use the SQL Query Evaluator
-
-1. **Create a repository on GitHub**
-    - Use this repository as a _template_ and copy it to your account using the "Use this template" button.
-2. **Edit your queries directly on GitHub**
-    - In your repository, navigate to `queries/queries.sql`.
-    - Click **“Edit this file”** (the pencil icon) and paste each query below its corresponding statement.
-    - When you’re done, save the changes using “Commit changes” with a clear message.
-3. **Check the execution**
-    - The changes will be automatically applied to the main branch.
-    - GitHub Actions will detect the new commit and launch the workflow.
-4. **Review the results**
-    - Once the workflow has finished, a file named `RESULTADOS.md` will be generated in the main branch.
-    - Open it to see which queries passed or failed the tests.
-5. **Fix the issues**
-    - If any query is incorrect, edit `queries/queries.sql` again via GitHub’s web interface.
-    - Commit again and wait for `RESULTADOS.md` to regenerate.
-6. **Submit the link**
-    - Once all queries have been validated, copy and share your repository’s URL on Moodle.
-
-***
-Data alone doesn't explain anything. With SQL, you learn to ask the questions that reveal what really matters.
-
-## Task Overview
-
-This task invites you to practice the art of formulating precise and useful questions to a database, an essential skill in backend development and data analysis. You'll work with two databases, **Tienda** and **Universidad**, allowing you to tackle everything from basic queries to more advanced operations with multiple tables, filtering, sorting, and aggregations. The goal isn't just to get the correct result, but to understand what you're asking, how you're doing it, and why.
-
-Think of each query as a small logical thinking challenge: how to access relevant information, how to relate tables, and how to structure the query to get exactly what you need in the clearest and most optimized way possible.
-
-## How to Complete the Task
-
-- Import the two provided database schemas (**Tienda** and **Universidad**) into your MySQL environment.
-- Each query is numbered. Write it, execute it, and verify it works correctly.
-- Once you think a query is correct, reflect on whether it can be improved: Is there a clearer way? Can it be optimized? Research SQL best practices and optimization techniques.
-- For submission, copy all queries to the corresponding automatic correction repository, following the instructions in the **README.md**.
-- Review your results files to ensure everything is well-written and returns the expected output.
-- When ready, add the links to your automatic correction repositories to Moodle and submit the task to your mentor.
-
-
 ## Tienda Database
 
 **Auto-evaluation:** [Link to auto-evaluation repository](https://github.com/IT-Academy-Back/shop-sql-queries-evaluator)
@@ -99,5 +60,44 @@ If a name is indicated in parentheses, that must be the **alias** (column name) 
 -- 39. List the name of the cheapest product from Hewlett-Packard manufacturer.
 -- 40. Return all products in the database that have a price greater than or equal to the most expensive product from Lenovo manufacturer.
 -- 41. List all Asus manufacturer products that have a price higher than the average price of all their products.
+
 ```
+## How to Use the SQL Query Evaluator
+
+1. **Create a repository on GitHub**
+    - Use this repository as a _template_ and copy it to your account using the "Use this template" button.
+2. **Edit your queries directly on GitHub**
+    - In your repository, navigate to `queries/queries.sql`.
+    - Click **“Edit this file”** (the pencil icon) and paste each query below its corresponding statement.
+    - When you’re done, save the changes using “Commit changes” with a clear message.
+3. **Check the execution**
+    - The changes will be automatically applied to the main branch.
+    - GitHub Actions will detect the new commit and launch the workflow.
+4. **Review the results**
+    - Once the workflow has finished, a file named `RESULTADOS.md` will be generated in the main branch.
+    - Open it to see which queries passed or failed the tests.
+5. **Fix the issues**
+    - If any query is incorrect, edit `queries/queries.sql` again via GitHub’s web interface.
+    - Commit again and wait for `RESULTADOS.md` to regenerate.
+6. **Submit the link**
+    - Once all queries have been validated, copy and share your repository’s URL on Moodle.
+
+***
+Data alone doesn't explain anything. With SQL, you learn to ask the questions that reveal what really matters.
+
+## Task Overview
+
+This task invites you to practice the art of formulating precise and useful questions to a database, an essential skill in backend development and data analysis. You'll work with two databases, **Tienda** and **Universidad**, allowing you to tackle everything from basic queries to more advanced operations with multiple tables, filtering, sorting, and aggregations. The goal isn't just to get the correct result, but to understand what you're asking, how you're doing it, and why.
+
+Think of each query as a small logical thinking challenge: how to access relevant information, how to relate tables, and how to structure the query to get exactly what you need in the clearest and most optimized way possible.
+
+## How to Complete the Task
+
+- Import the two provided database schemas (**Tienda** and **Universidad**) into your MySQL environment.
+- Each query is numbered. Write it, execute it, and verify it works correctly.
+- Once you think a query is correct, reflect on whether it can be improved: Is there a clearer way? Can it be optimized? Research SQL best practices and optimization techniques.
+- For submission, copy all queries to the corresponding automatic correction repository, following the instructions in the **README.md**.
+- Review your results files to ensure everything is well-written and returns the expected output.
+- When ready, add the links to your automatic correction repositories to Moodle and submit the task to your mentor.
+
 
